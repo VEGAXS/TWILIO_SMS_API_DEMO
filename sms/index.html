@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS TEST</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Phone Number</h2>
+
+    <div>
+      <input type="tel" id="phone" placeholder="international number（EG: +8869xxxxxxx(TW)）" />
+      <button id="sendBtn">Send Code</button>
+      <p id="countdown" style="color: gray; margin-top: 8px;"></p>
+      <input type="text" id="otp" placeholder="Enter Code" maxlength="6" />
+      <button id="verifyBtn">Enter</button>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
