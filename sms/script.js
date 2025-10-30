@@ -6,6 +6,7 @@ const otpInput = document.getElementById("otp");
 const sendBtn = document.getElementById("sendBtn");
 const verifyBtn = document.getElementById("verifyBtn");
 const message = document.getElementById("message");
+const message1 = document.getElementById("message1");
 const countdownText = document.getElementById("countdown");
 let countdownTimer = null;
 
@@ -80,9 +81,8 @@ sendBtn.addEventListener("click", async () =>
     const data = await res.json();
     if (data.message === "This Number was exist") {
       message.style.color = "red";
-      message.textContent = "This Number was exist，Do Not Register again！";
+      message1.textContent = "This Number was exist，Do Not Register again！";
       sendBtn.disabled = false;
-      stopCooldown();
       return;
     }
     if (res.ok) 
@@ -92,14 +92,12 @@ sendBtn.addEventListener("click", async () =>
         {
       message.textContent = "Send ERROR：" + (data.error || "Unknown");
       sendBtn.disabled = false;
-      stopCooldown(); 
     }
   } catch (err) 
   {
     console.error(err);
     message.textContent = "ERROR NET,Please wait again";
     sendBtn.disabled = false;
-    stopCooldown();
   }
 });
 
