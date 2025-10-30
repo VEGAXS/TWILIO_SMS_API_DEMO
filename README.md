@@ -1,4 +1,4 @@
-# TWILIO_SMS_API_DEMO
+# TWILIO_SMS_Verify_API_DEMO
 This DEMO is a simple SMS verification code API example.
 Users can directly modify the contents of this DEMO to build an SMS verification system for their own websites.
 
